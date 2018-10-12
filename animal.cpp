@@ -29,11 +29,11 @@ animal::animal(animal& a) {
 }
 
 std::ostream &operator<<( std::ostream &output, const animal &a) {
-    output << "Animal id: " << a.id;
-    output << "age: " << a.age;
-    output << "alive? : " << a.alive;
-    output << "x-cordinate: " << a.xLocation;
-    output << "y-cordinate: " << a.yLocation;
+    output << "Animal id: " << a.id << std::endl;
+    output << "age: " << a.age << std::endl;
+    output << "alive? : " << a.alive << std::endl;
+    output << "x-cordinate: " << a.xLocation << std::endl;
+    output << "y-cordinate: " << a.yLocation << std::endl;
     return output;
 }
 

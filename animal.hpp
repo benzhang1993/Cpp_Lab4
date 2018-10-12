@@ -9,7 +9,7 @@
 
 class animal {
     int age;
-    static long id;
+    long id;
     bool alive;
     double xLocation, yLocation;
 
@@ -17,7 +17,7 @@ class animal {
         static int counter;
         animal();
         animal(animal& a);
-        virtual ~animal();
+        virtual ~animal(){};
         animal(int age, double xCord, double yCord);
         virtual void move(double xCord, double yCord);
         virtual void sleep(){ std::cout << "Sleeping" << std::endl; };
@@ -25,7 +25,7 @@ class animal {
         friend std::ostream &operator<<( std::ostream &output, const animal &a);
 };
 
-int animal::counter = 0;
+
 
 
 #endif //CPP_LAB4_ANIMAL_HPP
