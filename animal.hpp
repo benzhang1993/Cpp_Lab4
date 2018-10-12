@@ -17,11 +17,11 @@ class animal {
         static int counter;
         animal();
         animal(animal& a);
-        virtual ~animal(){};
+        virtual ~animal(){ std::cout << "Animal is destroyed" << std::endl; };
         animal(int age, double xCord, double yCord);
         virtual void move(double xCord, double yCord);
-        virtual void sleep(){ std::cout << "Sleeping" << std::endl; };
-        virtual void eat(){ std::cout << "Eating" << std::endl; };
+        virtual void sleep(){ std::cout << "Animal is sleeping" << std::endl; };
+        virtual void eat(){ std::cout << "Animal is eating" << std::endl; };
         friend std::ostream &operator<<( std::ostream &output, const animal &a);
 };
 
